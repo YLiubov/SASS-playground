@@ -20,6 +20,7 @@ h1 {
   width: 50%;
   height: 200px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .banner .slogan span {
   font-size: 24px;
