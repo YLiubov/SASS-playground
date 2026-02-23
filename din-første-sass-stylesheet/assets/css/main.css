@@ -7,8 +7,10 @@ h1 {
 .banner {
   font-family: "Pacifico", cursive;
   height: 400px;
-  background-image: url("./assets/img/lemonade.jpg");
+  background-image: url("/assets/img/lemonade.jpg");
   position: relative;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
 }
 .banner .slogan {
   position: absolute;

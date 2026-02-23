@@ -9,8 +9,13 @@ h1 {
 .banner {
   font-family: 'Pacifico', cursive;
   height: 400px;
-  background-image: url("./assets/img/lemonade.jpg");
-  position: relative; // important for absolute children
+  background-image: url("/assets/img/lemonade.jpg");
+  position: relative;
+
+  border: {
+    top: 4px solid black;
+    bottom: 4px solid black;
+  }
 
   .slogan {
     position: absolute;
