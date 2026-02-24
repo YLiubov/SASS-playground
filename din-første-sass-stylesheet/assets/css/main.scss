@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 //variables here:
 $translucent-white: rgba(255, 255, 255, 0.3);
+$icon-square-leght: 300px;
 
 
 h1 {
@@ -47,5 +48,8 @@ h1 {
     margin: 2px;
     border: 4px solid black;
     font-size: 32px;
+
+    width: $icon-square-leght;
+    height: $icon-square-leght;
   }
 }
