@@ -14,6 +14,9 @@ h1 {
 }
 .banner .slogan {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 4px solid black;
   top: 20%;
   left: 25%;
@@ -24,7 +27,6 @@ h1 {
 }
 .banner .slogan span {
   font-size: 24px;
-  line-height: 200px;
 }
 
 .container {
