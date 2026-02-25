@@ -1,1 +1,74 @@
-/*# sourceMappingURL=main.css.map */
+html,
+body {
+  margin: 0;
+  font-family: Arial;
+  color: rgb(255, 255, 255);
+}
+
+p,
+a {
+  font-size: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+video {
+  width: 50%;
+  height: auto;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+}
+.container .nav {
+  width: 15%;
+  min-width: 140px;
+  color: rgb(255, 207, 207);
+  padding-top: 55px;
+  padding-right: 30px;
+  text-align: center;
+}
+.container .nav h4 {
+  -webkit-margin-before: 0;
+  margin-left: 50px;
+}
+.container .nav a {
+  font-size: 0.85rem;
+}
+.container .nav a:hover {
+  text-decoration: underline;
+}
+.container .main {
+  width: 85%;
+  min-height: 750px;
+  min-width: 600px;
+  background-color: rgb(255, 207, 207);
+}
+.container .main > * {
+  padding-left: 30px;
+}
+.container .main h1 {
+  font-size: 62px;
+  -webkit-margin-before: 0;
+  padding-top: 40px;
+}
+.container .main img {
+  height: 350px;
+  width: 550px;
+}
+.container .main p {
+  width: 55%;
+  min-width: 550px;
+}
+.container .main a:hover {
+  text-decoration: underline;
+}
+.container ul li {
+  font-size: 0.85rem;
+}/*# sourceMappingURL=main.css.map */

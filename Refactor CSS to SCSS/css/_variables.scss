@@ -1,0 +1,100 @@
+// ===== Variables (HEX) =====
+$color-white: rgb(255, 255, 255);
+$color-pink: rgb(255, 207, 207);
+
+@mixin a-hover {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// ===== Base =====
+html,
+body {
+    margin: 0;
+    font-family: Arial;
+    color: $color-white;
+}
+
+p,
+a {
+    font-size: 0.75rem;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+video {
+    width: 50%;
+    height: auto;
+}
+
+// ===== Layout =====
+.container {
+    min-height: 100%;
+    display: flex;
+
+    .nav {
+        width: 15%;
+        min-width: 140px;
+        color: $color-pink;
+        padding-top: 55px;
+        padding-right: 30px;
+        text-align: center;
+
+        h4 {
+            -webkit-margin-before: 0;
+            margin-left: 50px;
+        }
+
+        a {
+            font-size: 0.85rem;
+            @include a-hover;
+        }
+    }
+
+    .main {
+        width: 85%;
+        min-height: 750px;
+        min-width: 600px;
+        background-color: $color-pink;
+
+        // 👇 shorthand selector for all DIRECT children of .main
+        >* {
+            padding-left: 30px;
+        }
+
+        h1 {
+            font-size: 62px;
+            -webkit-margin-before: 0;
+            padding-top: 40px;
+        }
+
+        // index.html image (inside .main)
+        img {
+            height: 350px;
+            width: 550px;
+        }
+
+        // shows.html video (inside .main)
+        p {
+            width: 55%;
+            min-width: 550px;
+        }
+
+        a {
+            @include a-hover;
+        }
+    }
+
+    // if later you add ul/li inside .main
+    ul {
+        li {
+            font-size: 0.85rem;
+        }
+    }
+}
