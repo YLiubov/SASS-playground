@@ -26,6 +26,9 @@ video {
   min-height: 100%;
   display: flex;
 }
+.container a:hover {
+  text-decoration: underline;
+}
 .container .nav {
   width: 15%;
   min-width: 140px;
@@ -41,8 +44,8 @@ video {
 .container .nav a {
   font-size: 0.85rem;
 }
-.container .nav a:hover {
-  text-decoration: underline;
+.container .nav ul li {
+  font-size: 0.85rem;
 }
 .container .main {
   width: 85%;
@@ -65,10 +68,4 @@ video {
 .container .main p {
   width: 55%;
   min-width: 550px;
-}
-.container .main a:hover {
-  text-decoration: underline;
-}
-.container ul li {
-  font-size: 0.85rem;
 }/*# sourceMappingURL=main.css.map */
