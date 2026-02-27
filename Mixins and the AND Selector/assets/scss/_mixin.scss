@@ -50,9 +50,15 @@
   background-repeat: no-repeat;
 }
 
+@mixin hover-color($color) {
+  &:hover {
+    color: $color;
+  }
+}
+
 
 // =======================
-// LIST FOR STRIPES
+// STRIPES LIST
 // =======================
 
 $stripe-properties:
@@ -115,6 +121,8 @@ $stripe-properties:
       text-align: center;
       position: relative;
       top: 40%;
+
+      @include hover-color(red);
     }
   }
 
@@ -127,7 +135,6 @@ $stripe-properties:
       width: 100%;
       height: 100%;
 
-      // stripes via list
       @include stripes($stripe-properties...);
 
       .photo {

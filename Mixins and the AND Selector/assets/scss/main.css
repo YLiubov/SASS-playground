@@ -66,6 +66,9 @@
   position: relative;
   top: 40%;
 }
+.notecard .front .word:hover {
+  color: red;
+}
 .notecard .back {
   z-index: 1;
   line-height: 1.6;
