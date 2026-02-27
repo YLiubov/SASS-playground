@@ -1,4 +1,4 @@
-// ===== MIXIN =====
+// ===== MIXINS =====
 @mixin stripes($direction, $width-percent, $stripe-color, $stripe-background: #FFF) {
   background: repeating-linear-gradient(
     $direction,
@@ -17,7 +17,7 @@
   -o-transform: $t;
 }
 
-@mixin backface-visibility($visibility: hidden) {
+@mixin backface-visibility($visibility) {
   backface-visibility: $visibility;
   -webkit-backface-visibility: $visibility;
   -moz-backface-visibility: $visibility;
@@ -25,7 +25,22 @@
   -o-backface-visibility: $visibility;
 }
 
-// ===== Layout =====
+@mixin transform-style($style) {
+  transform-style: $style;
+  -webkit-transform-style: $style;
+  -moz-transform-style: $style;
+  -ms-transform-style: $style;
+  -o-transform-style: $style;
+}
+
+@mixin transition($time) {
+  transition: $time;
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -o-transition: $time;
+}
+
+// ===== LAYOUT =====
 .notecard {
   width: 300px;
   height: 180px;
@@ -38,6 +53,10 @@
   position: relative;
   perspective: 1000px;
 
+  // задания: сохранить 3D + плавность
+  @include transform-style(preserve-3d);
+  @include transition(0.4s);
+
   .front,
   .back {
     width: 100%;
@@ -47,15 +66,20 @@
     left: 0;
     box-sizing: border-box;
     padding: 10px;
-    transition: transform 0.6s;
 
-  @include backface-visibility($visibility: hidden);
+    // задание с аргументом
+    @include backface-visibility(hidden);
+
+    // плавный поворот сторон
+    @include transition(0.4s);
   }
 
   .front {
     z-index: 2;
     font-size: 20px;
-    @include transform(rotateY(0deg)); //  front лицом
+
+    // front смотрит на нас
+    @include transform(rotateY(0deg));
 
     .word {
       display: block;
@@ -69,7 +93,10 @@
     z-index: 1;
     word-wrap: break-word;
     line-height: 1.6;
-    @include transform(rotateY(180deg)); //  back сзади
+
+    // в задании: добавить transform rotateY(-180deg) / (180deg)
+    // Главное: back должен быть "сзади" до hover
+    @include transform(rotateY(180deg));
 
     .definition {
       width: 100%;
@@ -79,6 +106,7 @@
         width: 60%;
         height: 90px;
         margin: 10px auto 0;
+
         background-image: url("../img/titanosaur.jpg");
         background-size: cover;
         background-position: center;
@@ -87,6 +115,7 @@
     }
   }
 
+  // задание про &:hover
   &:hover {
     .front {
       @include transform(rotateY(-180deg));
